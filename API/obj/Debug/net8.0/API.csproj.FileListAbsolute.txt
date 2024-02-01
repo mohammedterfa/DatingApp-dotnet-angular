@@ -135,3 +135,5 @@ D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\Microsoft.AspNetCore.A
 D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\Data\UserSeedData.json
+D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\AutoMapper.dll
+D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
