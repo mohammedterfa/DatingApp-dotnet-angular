@@ -29,7 +29,7 @@ public class UsersController : BaseApiController
         return Ok(users);
     }
 
-    [HttpGet("{usernmae}")]
+    [HttpGet("{username}")]
     public async Task<ActionResult<MemberDto>> GetUser(string username)
     {
         return await _userRepository.GetMemberAsync(username);
