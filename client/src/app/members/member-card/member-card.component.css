@@ -24,6 +24,7 @@
   margin-left: auto;
   margin-right: auto;
   opacity: 0;
+  padding: 10px;
 }
 
 .card-img-wrapper:hover .member-icons {
