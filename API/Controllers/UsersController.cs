@@ -6,6 +6,7 @@ using API.Extensions;
 using API.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -122,4 +123,6 @@ public class UsersController : BaseApiController
 
         return BadRequest("Problem deleting photo");
     }
+
+    
 }
