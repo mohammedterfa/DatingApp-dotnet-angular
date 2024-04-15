@@ -48,4 +48,9 @@ public class LikesRepository : ILikesRepository
             .Include(x => x.LikedUsers)
             .FirstOrDefaultAsync(x => x.Id == userId);
     }
+
+    public Task GetUserWithLikes(string sourceUserId)
+    {
+        throw new NotImplementedException();
+    }
 }
