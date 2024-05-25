@@ -24,7 +24,6 @@ D:\mohammed terfa\projects\DatingApp\API\obj\Debug\net8.0\staticwebassets\msbuil
 D:\mohammed terfa\projects\DatingApp\API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.API.props
 D:\mohammed terfa\projects\DatingApp\API\obj\Debug\net8.0\staticwebassets.pack.json
 D:\mohammed terfa\projects\DatingApp\API\obj\Debug\net8.0\scopedcss\bundle\API.styles.css
-D:\mohammed terfa\projects\DatingApp\API\obj\Debug\net8.0\API.csproj.CopyComplete
 D:\mohammed terfa\projects\DatingApp\API\obj\Debug\net8.0\API.dll
 D:\mohammed terfa\projects\DatingApp\API\obj\Debug\net8.0\refint\API.dll
 D:\mohammed terfa\projects\DatingApp\API\obj\Debug\net8.0\API.pdb
@@ -139,3 +138,4 @@ D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\AutoMapper.dll
 D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\CloudinaryDotNet.dll
 D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\mohammed terfa\projects\DatingApp\api\obj\Debug\net8.0\API.csproj.Up2Date
