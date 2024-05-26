@@ -4,6 +4,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using API.Extensions;
 using API.Entities;
+using API.Helpers;
 
 namespace API.Controllers;
 
@@ -48,4 +49,17 @@ public class MessagesController : BaseApiController
         
         return BadRequest("Failed to send message");
     }
+
+    [HttpGet]
+    public async Task<ActionResult<PagedList<MessageDto>>> 
+        GetMessageForUser([FromQuery]MessageParams messageParams){
+            messageParams.Username = User.GetUsername();
+
+            var messages = await _messageRepository.GetMessageForUser(messageParams);
+
+            Response.AddPaginationHeader(new PaginationHeader(messages.CurrentPage,
+                 messages.PageSize, messages.TotalCount, messages.TotalPages));
+
+            return messages;
+        }
 }
