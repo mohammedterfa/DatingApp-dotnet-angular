@@ -13,6 +13,8 @@ import { HomeComponent } from './pages/home/home.component';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { RouterLink } from '@angular/router';
     MatIconModule,
     MatInputModule,
     ReactiveFormsModule,
-    RouterLink
+    RouterLink,
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
