@@ -3479,11 +3479,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\mohammed terfa\\projects\\auth\\api\\api.csproj",
+      "projectUniqueName": "D:\\mohammed terfa\\projects\\DatingApp\\auth\\api\\api.csproj",
       "projectName": "api",
-      "projectPath": "d:\\mohammed terfa\\projects\\auth\\api\\api.csproj",
+      "projectPath": "D:\\mohammed terfa\\projects\\DatingApp\\auth\\api\\api.csproj",
       "packagesPath": "C:\\Users\\CreatorPC\\.nuget\\packages\\",
-      "outputPath": "d:\\mohammed terfa\\projects\\auth\\api\\obj\\",
+      "outputPath": "D:\\mohammed terfa\\projects\\DatingApp\\auth\\api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
