@@ -3,13 +3,16 @@ using System.Security.Claims;
 using System.Text;
 using api.DTOs;
 using api.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 namespace api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
@@ -28,7 +31,7 @@ namespace api.Controllers
             _configuration = configuration;
         }
 
-
+        [AllowAnonymous]
         [HttpPost("register")]
         public async Task<ActionResult<string>> Register(RegisterDto registerDto)
         {
@@ -65,7 +68,7 @@ namespace api.Controllers
 
             });
         }
-
+        [AllowAnonymous]
         [HttpPost("login")]
         public async Task<ActionResult<AuthResponseDto>> Login(LoginDto loginDto)
         {
@@ -139,9 +142,47 @@ namespace api.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         
+            } 
+
+            [Authorize]
+            [HttpGet("detail")]
+            public async Task<ActionResult<UserDetailDto>> GetUserDetail(){
+                var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                var user = await _userManager.FindByIdAsync(currentUserId!);
+
+                if(user is null ){
+                    return NotFound(new AuthResponseDto{
+                        IsSuccess = false,
+                        Message = "User not found"
+                    });
+                }
+
+                return Ok(new UserDetailDto {
+                    Id = user.Id,
+                    Email = user.Email,
+                    FullName = user.FullName,
+                    Roles = [..await _userManager.GetRolesAsync(user)],
+                    PhoneNumber = user.PhoneNumber,
+                    PhoneNumberConfirmed = user.PhoneNumberConfirmed,
+                    AccessFailedCount = user.AccessFailedCount
+
+                });
+            } 
+
+            [HttpGet]
+            public async Task<ActionResult<IEnumerable<UserDetailDto>>> GetUsers()
+            {
+                var users = await _userManager.Users.Select(u=> new UserDetailDto {
+                    Id = u.Id,
+                    Email = u.Email,
+                    FullName = u.FullName,
+                    Roles =  _userManager.GetRolesAsync(u).Result.ToArray(),
+                }).ToListAsync();
+
+
+                return Ok(users);
             }
         }
-
 
 
     }
