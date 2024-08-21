@@ -38,18 +38,27 @@
 
     <mat-form-field appearance="fill" class="w-full">
       <mat-label>Password</mat-label>
-      <input matInput type="password" placeholder="Password">
+      <input matInput type="{{ confirmPasswordHide ? 'password' : 'text' }}" placeholder="Password">
       <mat-icon matPrefix>
         lock
       </mat-icon>
+      <mat-icon
+        (click)="confirmPasswordHide=!confirmPasswordHide"
+        matSuffix>{{ confirmPasswordHide ? 'visibility_off' : 'visibility' }}</mat-icon>
+
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="w-full">
       <mat-label>Confirm Password</mat-label>
-      <input matInput type="password" placeholder="Confirm Password">
-      <mat-icon matPrefix>
+      <input matInput  type="{{ confirmPasswordHide ? 'password' : 'text' }}" placeholder="Confirm Password">
+      <mat-icon
+        (click)="confirmPasswordHide=!confirmPasswordHide"
+        matPrefix>
         lock
       </mat-icon>
+      <mat-icon
+        (click)="confirmPasswordHide=!confirmPasswordHide"
+        matSuffix>{{ confirmPasswordHide ? 'visibility_off' : 'visibility' }}</mat-icon>
     </mat-form-field>
 
     <button class="w-full text-white border-collapse border-slate-200 disabled:bg-purble-400 py-2 px-3 bg-pink-700"
@@ -57,6 +66,13 @@
     >
       Register
     </button>
+
+    <div class="my-4">
+      <span class="text-slate-600">
+        Already have an account?
+        <a routerLink="/login" class="text-purple-700">Login</a>
+      </span>
+    </div>
 
 
   </form>
