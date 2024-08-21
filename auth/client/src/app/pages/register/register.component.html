@@ -10,12 +10,54 @@
     </div>
 
     <mat-form-field appearance="fill" class="w-full">
-      <mat-label>Email *</mat-label>
+      <mat-label>Email</mat-label>
       <input matInput placeholder="Email">
       <mat-icon matPrefix>
         email
       </mat-icon>
-
     </mat-form-field>
+
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Full Name</mat-label>
+      <input matInput placeholder="Full Name">
+      <mat-icon matPrefix>
+        person
+      </mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Roles</mat-label>
+      <mat-select multiple>
+        <mat-option>Admin</mat-option>
+        <mat-option>User</mat-option>
+      </mat-select>
+      <mat-icon matPrefix>
+        groups
+      </mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" placeholder="Password">
+      <mat-icon matPrefix>
+        lock
+      </mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Confirm Password</mat-label>
+      <input matInput type="password" placeholder="Confirm Password">
+      <mat-icon matPrefix>
+        lock
+      </mat-icon>
+    </mat-form-field>
+
+    <button class="w-full text-white border-collapse border-slate-200 disabled:bg-purble-400 py-2 px-3 bg-pink-700"
+      type="submit"
+    >
+      Register
+    </button>
+
+
   </form>
 </div>
