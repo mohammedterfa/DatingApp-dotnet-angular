@@ -19,6 +19,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { RegisterComponent } from './pages/register/register.component';
 import {MatSelectModule} from '@angular/material/select';
 import { AsyncPipe } from '@angular/common';
+import { AccountComponent } from './pages/account/account.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AsyncPipe } from '@angular/common';
     LoginComponent,
     NavbarComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

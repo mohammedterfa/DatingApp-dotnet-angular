@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { jwtDecode } from 'jwt-decode';
 import { RegisterRequest } from '../interfaces/register-request';
+import { UserDetail } from '../interfaces/user-detail';
 @Injectable({
   providedIn: 'root'
 })
@@ -76,5 +77,9 @@ export class AuthService {
   {
     return this.http
       .post<AuthResponse>(`${this.apiUrl}account/register`, data);
+  }
+
+  getDetail(): Observable<UserDetail>{
+    return this.http.get<UserDetail>(`${this.apiUrl}account/detail`);
   }
 }
