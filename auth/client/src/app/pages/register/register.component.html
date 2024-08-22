@@ -1,5 +1,11 @@
 <div class="h-screen flex items-center justify-center">
-  <form class="shadow-md rounded-md p-5 bg-white w-1/5">
+  <form class="shadow-md rounded-md p-5 bg-white w-1/5"
+    [formGroup]="registerForm"
+    (ngSubmit)="register()"
+  >
+    <div *ngFor="let error of errors" class="bg-red-100 border mb-2 flex flex-col gap-2 border-red-400 text-red-400 px-4 py-4 rounded-md relative">
+      <div class="text-xs ">{{ error.description }}</div>
+    </div>
     <div class="py-4">
       <h1 class="font-bold text-left py-2 ">
         Register
@@ -11,7 +17,7 @@
 
     <mat-form-field appearance="fill" class="w-full">
       <mat-label>Email</mat-label>
-      <input matInput placeholder="Email">
+      <input matInput placeholder="Email" formControlName="email">
       <mat-icon matPrefix>
         email
       </mat-icon>
@@ -19,7 +25,7 @@
 
     <mat-form-field appearance="fill" class="w-full">
       <mat-label>Full Name</mat-label>
-      <input matInput placeholder="Full Name">
+      <input matInput placeholder="Full Name" formControlName="fullName">
       <mat-icon matPrefix>
         person
       </mat-icon>
@@ -27,9 +33,12 @@
 
     <mat-form-field appearance="fill" class="w-full">
       <mat-label>Roles</mat-label>
-      <mat-select multiple>
-        <mat-option>Admin</mat-option>
-        <mat-option>User</mat-option>
+      <mat-select multiple formControlName="roles">
+
+        <mat-option *ngFor="let role of roles$ | async;" [value]="role.name">
+          {{ role.name }}
+        </mat-option>
+
       </mat-select>
       <mat-icon matPrefix>
         groups
@@ -38,7 +47,12 @@
 
     <mat-form-field appearance="fill" class="w-full">
       <mat-label>Password</mat-label>
-      <input matInput type="{{ confirmPasswordHide ? 'password' : 'text' }}" placeholder="Password">
+      <input
+       formControlName="password"
+       matInput
+       type="{{ confirmPasswordHide ? 'password' : 'text' }}"
+       placeholder="Password"
+       >
       <mat-icon matPrefix>
         lock
       </mat-icon>
@@ -50,7 +64,9 @@
 
     <mat-form-field appearance="fill" class="w-full">
       <mat-label>Confirm Password</mat-label>
-      <input matInput  type="{{ confirmPasswordHide ? 'password' : 'text' }}" placeholder="Confirm Password">
+      <input
+        formControlName="confirmPasword"
+        matInput  type="{{ confirmPasswordHide ? 'password' : 'text' }}" placeholder="Confirm Password">
       <mat-icon
         (click)="confirmPasswordHide=!confirmPasswordHide"
         matPrefix>
@@ -59,10 +75,20 @@
       <mat-icon
         (click)="confirmPasswordHide=!confirmPasswordHide"
         matSuffix>{{ confirmPasswordHide ? 'visibility_off' : 'visibility' }}</mat-icon>
+
     </mat-form-field>
+    <span
+      class="text-red-600"
+      *ngIf="registerForm.hasError('passwordMismatch')
+          && registerForm.get('confirmPassword')?.dirty
+          && registerForm.get('confirmPassword')?.touched
+        ">
+          password do not match
+    </span>
 
     <button class="w-full text-white border-collapse border-slate-200 disabled:bg-purble-400 py-2 px-3 bg-pink-700"
       type="submit"
+      [disabled]="!registerForm.valid"
     >
       Register
     </button>
