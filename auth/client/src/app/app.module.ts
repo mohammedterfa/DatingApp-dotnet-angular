@@ -13,13 +13,14 @@ import { HomeComponent } from './pages/home/home.component';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
 import { RegisterComponent } from './pages/register/register.component';
 import {MatSelectModule} from '@angular/material/select';
 import { AsyncPipe } from '@angular/common';
 import { AccountComponent } from './pages/account/account.component';
+import { TokenInterceptor } from './interceptor/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,13 @@ import { AccountComponent } from './pages/account/account.component';
     MatSelectModule,
     AsyncPipe
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

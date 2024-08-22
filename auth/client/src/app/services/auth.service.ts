@@ -33,7 +33,7 @@ export class AuthService {
   }
 
 
-  private getToken = (): string|null => localStorage.getItem(this.tokenKey) || '';
+   getToken = (): string|null => localStorage.getItem(this.tokenKey) || '';
 
   isLoggedIn = (): boolean=> {
     const token =  this.getToken();
