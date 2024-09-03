@@ -139,3 +139,9 @@ D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\AutoMapper.Extensions.
 D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\CloudinaryDotNet.dll
 D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\mohammed terfa\projects\DatingApp\api\obj\Debug\net8.0\API.csproj.Up2Date
+D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\mohammed terfa\projects\DatingApp\api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
