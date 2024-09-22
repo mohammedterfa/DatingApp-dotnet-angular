@@ -6614,11 +6614,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\mohammed terfa\\projects\\DatingApp\\API\\API.csproj",
+      "projectUniqueName": "D:\\mohammedterfa\\projects\\DatingApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "d:\\mohammed terfa\\projects\\DatingApp\\API\\API.csproj",
+      "projectPath": "D:\\mohammedterfa\\projects\\DatingApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\CreatorPC\\.nuget\\packages\\",
-      "outputPath": "d:\\mohammed terfa\\projects\\DatingApp\\API\\obj\\",
+      "outputPath": "D:\\mohammedterfa\\projects\\DatingApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
