@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\mohammedterfa\\projects\\DatingApp\\api\\API.csproj": {}
+    "D:\\mohammedterfa\\projects\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\mohammedterfa\\projects\\DatingApp\\api\\API.csproj": {
+    "D:\\mohammedterfa\\projects\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\mohammedterfa\\projects\\DatingApp\\api\\API.csproj",
+        "projectUniqueName": "D:\\mohammedterfa\\projects\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\mohammedterfa\\projects\\DatingApp\\api\\API.csproj",
+        "projectPath": "D:\\mohammedterfa\\projects\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\CreatorPC\\.nuget\\packages\\",
-        "outputPath": "D:\\mohammedterfa\\projects\\DatingApp\\api\\obj\\",
+        "outputPath": "D:\\mohammedterfa\\projects\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
